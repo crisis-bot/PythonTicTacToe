@@ -8,17 +8,17 @@ def mainBoard(p):
     # Print the current board setup now. Or in other words
     # the tic tac toe game, current setup. Wat eva' you get
     # what I mean.
-    print p[0]+" | "+p[1]+" | "+p[2],"\n"
-    print p[3]+" | "+p[4]+" | "+p[5],"\n"
-    print p[6]+" | "+p[7]+" | "+p[8],"\n"
+    print(p[0]+" | "+p[1]+" | "+p[2],"\n")
+    print(p[3]+" | "+p[4]+" | "+p[5],"\n")
+    print(p[6]+" | "+p[7]+" | "+p[8],"\n")
 
 def getPosition(p):
     # Where does the user want to put their mark?
-    where = input("Where do you want to place your mark? ")
+    where = eval(input("Where do you want to place your mark? "))
     # is a X/Y already in that spot?
     while ("Y" in p[where-1]) or ("X" in p[where-1]):
         # If so, ask again.
-        where = input("Place is already covered. Please try again:\n")
+        where = eval(input("Place is already covered. Please try again:\n"))
 
     # RETURN IT! :D
     return where
@@ -127,13 +127,13 @@ while game:
     # If whosTurn is TRUE, or in other words it is the players turn
     # run this:
     if whosTurn:
-        print "-- Your Turn --"
+        print("-- Your Turn --")
         # Get position from user:
         position = getPosition(places)
         # Now, place it into the main places list
         places = placeValues(playerLetter, position, places)
     else: # And if it is false, it is the computers turn. :)
-        print "-- Computers Turn --"
+        print("-- Computers Turn --")
         # Randomly generate a position
         position = random.randint(1,9)
         # What if the position is already taken?
@@ -165,8 +165,8 @@ mainBoard(places)
 
 # If the winner code is ONE, user WINS!
 if aWinner == 1:
-    print "YOU WON! GOOD JOB! Now, for a victory party. :)"
+    print("YOU WON! GOOD JOB! Now, for a victory party. :)")
 elif aWinner == 2: # If the code is TWO, computer wins!
-    print "Ha ha, looser, the COMPUTER WON! Try again."
+    print("Ha ha, looser, the COMPUTER WON! Try again.")
 else: # Else, it's a TIE!
-    print "It was a TIE! Play again!"
+    print("It was a TIE! Play again!")
