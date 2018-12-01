@@ -8,9 +8,9 @@ def mainBoard(p):
     # Print the current board setup now. Or in other words
     # the tic tac toe game, current setup. Wat eva' you get
     # what I mean.
-    print(p[0]+" | "+p[1]+" | "+p[2],"\n")
-    print(p[3]+" | "+p[4]+" | "+p[5],"\n")
-    print(p[6]+" | "+p[7]+" | "+p[8],"\n")
+    print((p[0]+" | "+p[1]+" | "+p[2],"\n"))
+    print((p[3]+" | "+p[4]+" | "+p[5],"\n"))
+    print((p[6]+" | "+p[7]+" | "+p[8],"\n"))
 
 def getPosition(p):
     # Where does the user want to put their mark?
